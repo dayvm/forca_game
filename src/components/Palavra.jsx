@@ -1,5 +1,11 @@
-export default function Palavra() {
+export default function Palavra({ palavraSecreta, letrasCorretas }) {
     return (
-        <h2>_ _ _ _ _</h2>
+        <div className="palavra">
+            {palavraSecreta.split("").map((letra, index) => (
+                <span key={index} className="letra">
+                    {letrasCorretas.includes(letra) ? letra : "_"}
+                </span>
+            ))}
+        </div>
     );
 }
