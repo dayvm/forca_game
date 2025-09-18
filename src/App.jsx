@@ -33,7 +33,7 @@ function App() {
   return (
       <main className="container">
         <Header iniciarJogo={iniciarJogo}/>
-        <Forca />
+        <Forca erros={letrasIncorretas.length}/>
         <Palavra />
         <Teclado />
       </main>
