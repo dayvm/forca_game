@@ -52,6 +52,10 @@ function App() {
         <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
         <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas} statusDoJogo={statusDoJogo}/>
 
+      <h2>palavraSecreta {palavraSecreta}</h2>
+      <h2>letrasCorretas {letrasCorretas}</h2>
+      <h2>letrasIncorretas {letrasIncorretas}</h2>
+      <h2>statusDoJogo {statusDoJogo}</h2>
         {/* Mensagens de vitória/derrota */}
       {statusDoJogo === 'venceu' && <h2>🎉 Parabéns, você venceu!</h2>}
       {statusDoJogo === 'perdeu' && <h2>❌ Você perdeu! A palavra era: {palavraSecreta}</h2>}
