@@ -44,13 +44,17 @@ function App() {
       setStatusDoJogo("perdeu");
     }
   }, [letrasCorretas, letrasIncorretas, palavraSecreta]);
-  
+
   return (
       <main className="container">
         <Header iniciarJogo={iniciarJogo}/>
         <Forca erros={letrasIncorretas.length}/>
         <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
-        <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas}/>
+        <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas} statusDoJogo={statusDoJogo}/>
+
+        {/* Mensagens de vitória/derrota */}
+      {statusDoJogo === 'venceu' && <h2>🎉 Parabéns, você venceu!</h2>}
+      {statusDoJogo === 'perdeu' && <h2>❌ Você perdeu! A palavra era: {palavraSecreta}</h2>}
       </main>
   )
 }
