@@ -35,7 +35,7 @@ function App() {
         <Header iniciarJogo={iniciarJogo}/>
         <Forca erros={letrasIncorretas.length}/>
         <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
-        <Teclado />
+        <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas}/>
       </main>
   )
 }

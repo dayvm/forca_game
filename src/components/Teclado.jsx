@@ -1,4 +1,4 @@
-export default function Teclado() {
+export default function Teclado({ handleTentativa, letrasCorretas, letrasIncorretas }) {
     return (
         <div>
             <button>A</button>
