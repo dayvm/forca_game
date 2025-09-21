@@ -30,6 +30,21 @@ function App() {
     }
   }
   
+  useEffect (() => {
+    const venceu = palavraSecreta.
+      split("")
+      .every((letra) => letrasCorretas.includes(letra));
+
+    if (venceu) {
+      setStatusDoJogo("venceu");
+      return;
+    }
+
+    if (letrasIncorretas.length>=6){
+      setStatusDoJogo("perdeu");
+    }
+  }, [letrasCorretas, letrasIncorretas, palavraSecreta]);
+  
   return (
       <main className="container">
         <Header iniciarJogo={iniciarJogo}/>
