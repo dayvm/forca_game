@@ -5,7 +5,7 @@ export default function Teclado({ handleTentativa, letrasCorretas, letrasIncorre
         <div className="teclado">
             {letras.map((letra) => (
                 <button key={letra}
-                onclick={() => handleTentativa(letra)}
+                onClick={() => handleTentativa(letra)}
                 disabled={statusDoJogo!=="jogando"}
                 >
                 {letra.toUpperCase()}
