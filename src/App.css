@@ -1,0 +1,65 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  color: white; /* Define a cor do texto padrão como branco, para contrastar com o fundo */
+}
+
+/* 1. O contêiner principal (o palco) */
+.cena-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #001f3f;
+  position: relative; 
+  overflow: hidden;
+}
+
+/* 2. Camada 1: O Personagem (no fundo) */
+.personagem {
+  position: absolute;
+  left: 50%;
+  top: 55%; /* Um pouco mais para baixo para parecer que está na água */
+  transform: translate(-50%, -50%);
+  max-height: 40%;
+  z-index: 1; /* Camada mais baixa */
+}
+
+/* 3. Camada 2: As Ondas (na frente do personagem) */
+.ondas-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* A altura inicial da água */
+  background-repeat: repeat-x;
+  background-size: contain;
+  z-index: 2; /* Camada do meio */
+}
+
+/* 4. Camada 3: A Interface do Jogo (na frente de tudo) */
+.ui-container {
+  position: relative; /* Para que o z-index funcione */
+  z-index: 3; /* Camada mais alta */
+  
+  /* Usando Flexbox para organizar o conteúdo da UI verticalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Espaça os elementos (palavra, teclado, etc) */
+  align-items: center;
+  
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Pequenos ajustes para os componentes do jogo parecerem melhores em um fundo escuro */
+.ui-container h1, .ui-container h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.mensagens-fim-de-jogo {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}

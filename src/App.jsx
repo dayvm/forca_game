@@ -5,6 +5,8 @@ import Palavra from './components/Palavra'
 import Teclado from './components/Teclado'
 import { useState, useEffect } from 'react';
 import { palavras } from './data/palavras'
+import jonaPng from './assets/JONA.png';
+import ondaGif from './assets/onda gabriel renan.gif';
 
 function App() {
   const [palavraSecreta, setPalavraSecreta] = useState("");
