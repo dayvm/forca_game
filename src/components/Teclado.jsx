@@ -3,14 +3,16 @@ export default function Teclado({ handleTentativa, letrasCorretas, letrasIncorre
 
     return (
         <div className="teclado">
-            {letras.map((letra) => (
+            {statusDoJogo==="jogando" && (
+            letras.map((letra) => (
                 <button key={letra}
                 onClick={() => handleTentativa(letra)}
-                disabled={statusDoJogo!=="jogando"}
+                disabled={statusDoJogo!=="jogando" || letrasCorretas.includes(letra) || letrasIncorretas.includes(letra)}
                 >
                 {letra.toUpperCase()}
-                </button>
-            ))}
+                </button>))
+            )}
+            
         </div>
     );
 }
