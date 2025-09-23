@@ -9,7 +9,7 @@ body {
 .cena-container {
   width: 100vw;
   height: 100vh;
-  background-color: #001f3f;
+  background-color: rgb(119, 153, 167);
   position: relative; 
   overflow: hidden;
 }
@@ -18,7 +18,7 @@ body {
 .personagem {
   position: absolute;
   left: 50%;
-  top: 55%; /* Um pouco mais para baixo para parecer que está na água */
+  top: 25%; /* Um pouco mais para baixo para parecer que está na água */
   transform: translate(-50%, -50%);
   max-height: 40%;
   z-index: 1; /* Camada mais baixa */
@@ -40,6 +40,7 @@ body {
 .ui-container {
   position: relative; /* Para que o z-index funcione */
   z-index: 3; /* Camada mais alta */
+  top: 40%;
   
   /* Usando Flexbox para organizar o conteúdo da UI verticalmente */
   display: flex;

@@ -62,16 +62,33 @@ function App() {
   })
 
   return (
-      <main className="container">
+    <div className="cena-container">
+
+      <img 
+        src={jonaPng} 
+        alt="Personagem Jona" 
+        className="personagem" 
+      />
+
+      <div 
+        className="ondas-container" 
+        style={{ backgroundImage: `url(${ondaGif})` }}
+      >
+      </div>
+
+      <main className="ui-container">
+        <h1>SALVE O JONA</h1>
         <Header iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}/>
         <Forca erros={letrasIncorretas.length} statusDoJogo={statusDoJogo}/>
         <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
         <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas} statusDoJogo={statusDoJogo}/>
-        {statusDoJogo}
+        
         {/* Mensagens de vitória/derrota */}
       {statusDoJogo === 'venceu' && <h2>🎉 Parabéns, você venceu!</h2>}
       {statusDoJogo === 'perdeu' && <h2>❌ Você perdeu! A palavra era: {palavraSecreta}</h2>}
       </main>
+
+    </div>
   )
 }
 
