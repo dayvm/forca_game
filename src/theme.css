@@ -1,0 +1,21 @@
+/* src/theme.css */
+
+/* Para o tema claro (se o usuário usar) */
+:root {
+  --pico-background-color: #ffffff;
+  --pico-color: #213547;
+  --pico-primary: #646cff;
+  --pico-primary-hover: #535bf2;
+  --pico-card-background-color: #f9f9f9;
+}
+
+/* Para o tema escuro (o que você gostou) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pico-background-color: #242424;
+    --pico-color: rgba(255, 255, 255, 0.87);
+    --pico-primary: #646cff;
+    --pico-primary-hover: #535bf2;
+    --pico-card-background-color: #1a1a1a;
+  }
+}
