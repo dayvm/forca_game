@@ -173,3 +173,55 @@ body {
     /* Box-sizing to include padding/borders in size (good practice) */
     box-sizing: border-box;
 }
+
+.teclado {
+  /* Position the div relative for vertical offset */
+    position: relative;
+
+    /* Flex container with vertical direction */
+    display: flex;
+    flex-direction: column;
+
+    /* Center children horizontally */
+    align-items: center;
+
+    /* Space between children vertically */
+    gap: 20px; /* Adjust vertical spacing here */
+
+    /* Container size just enough for children */
+    width: max-content;
+    height: max-content;
+
+    /* Optional: center container horizontally in parent */
+    margin: 0 auto;
+
+    /* Box sizing for reliable sizing */
+    box-sizing: border-box;
+}
+
+.tecladoLinha {
+   /* Position the div relative to viewport */
+    position: relative;
+
+    /* Use Flexbox for horizontal alignment */
+    display: flex;
+
+    /* Align children centered horizontally */
+    justify-content: center;
+
+    /* Add space (gap) between each child element */
+    gap: 7px; /* Adjust this value as needed for spacing */
+
+    /* Occupies only the necessary width based on children */
+    width: max-content;
+
+    /* Occupies only the necessary height based on children */
+    height: max-content;
+
+    /* Optional: remove default margin/padding */
+    margin: 0 auto; /* Horizontal auto margin to help center container itself if needed */
+    padding: 0;
+
+    /* Box-sizing to include padding/borders in size (good practice) */
+    box-sizing: border-box;
+}
