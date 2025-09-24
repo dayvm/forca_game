@@ -1,8 +1,8 @@
 export default function Forca({ erros, statusDoJogo }) {
     return (
-        <div className="forca">
+        <div>
             {statusDoJogo==="jogando" && (
-                <p>Vidas restantes: {7 - erros} </p>
+                <p className="vidas">Vidas restantes: {7 - erros} </p>
             )}
             {/* <img src={`../../public/imagens/forca${erros}.png`} alt={`Erro ${erros}`} /> */}
         </div>

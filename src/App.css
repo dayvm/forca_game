@@ -204,12 +204,12 @@ body {
     justify-content: center;
 
     /* Add space (gap) between each child element */
-    gap: 90px; /* Adjust this value as needed for spacing */
+    gap: 0px; /* Adjust this value as needed for spacing */
 
    width: 100%;
   max-width: 100vw;
   flex-wrap: wrap; /* ou wrap se quiser que quebre linha */
-  overflow: auto;  /* ou auto, se quiser scroll */
+  overflow: hidden;  /* ou auto, se quiser scroll */
 
     /* Occupies only the necessary height based on children */
     height: max-content;
@@ -236,12 +236,14 @@ body {
     /* Space between children vertically */
     gap: 12px; /* Adjust vertical spacing here */
 
+    
     /* Container size just enough for children */
     width: max-content;
     height: max-content;
 
-    /* Optional: center container horizontally in parent */
-    margin: 0 auto;
+    
+    margin-left: 50px;
+    margin-right: 50px;
 
     /* Box sizing for reliable sizing */
     box-sizing: border-box;
@@ -289,7 +291,7 @@ body {
     gap: 20px; /* Adjust vertical spacing here */
 
     /* Container size just enough for children */
-    width: max-content;
+    width: 60%;
     height: max-content;
 
     /* Optional: center container horizontally in parent */
@@ -301,7 +303,8 @@ body {
 
 .letra {
   aspect-ratio: 1 / 1;
-  width: 100px;
+  max-width: 100px;
+  min-width: 80px;
 
   /* Reset padding (important to maintain square shape) */
   padding: 0;
@@ -325,4 +328,37 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.palavra {
+   /* Position the div relative to viewport */
+    position: relative;
+
+    /* Use Flexbox for horizontal alignment */
+    display: flex;
+
+    /* Align children centered horizontally */
+    justify-content: center;
+
+    /* Add space (gap) between each child element */
+    gap: 3px; /* Adjust this value as needed for spacing */
+
+    /* Occupies only the necessary width based on children */
+    width: max-content;
+
+    /* Occupies only the necessary height based on children */
+    height: 100%;
+
+    /* Optional: remove default margin/padding */
+    margin: 0 auto; /* Horizontal auto margin to help center container itself if needed */
+    padding: 0;
+
+    /* Box-sizing to include padding/borders in size (good practice) */
+    box-sizing: border-box;
+
+    
+}
+
+.vidas {
+  height: 100px;
 }
