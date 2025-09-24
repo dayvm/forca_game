@@ -1,9 +1,9 @@
 export default function Palavra({ palavraSecreta, letrasCorretas }) {
     return (
-        <div className="palavra">
+        <div className="tecladoLinha">
             {palavraSecreta.split("").map((letra, index) => (
                 <span key={index} className="letra">
-                    {letrasCorretas.includes(letra) ? letra : "_"}
+                    {letrasCorretas.includes(letra) ? letra.toUpperCase() : ""}
                 </span>
             ))}
         </div>
