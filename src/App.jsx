@@ -94,8 +94,10 @@ function App() {
         </div>
         
         <div className='playground-jogando'>
-        <Forca erros={letrasIncorretas.length} statusDoJogo={statusDoJogo}/>
-        <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
+          <div className='palavra-vidas'>
+            <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
+            <Forca erros={letrasIncorretas.length} statusDoJogo={statusDoJogo}/>
+          </div>
         <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas} statusDoJogo={statusDoJogo}/>
 
         </div>
