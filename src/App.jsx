@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './components/Header'
+import BotaoJogar from './components/BotaoJogar'
 import Forca from './components/Forca'
 import Palavra from './components/Palavra'
 import Teclado from './components/Teclado'
@@ -76,17 +76,36 @@ function App() {
       >
       </div>
 
-      <main className="ui-container">
-        <h1>SALVE O JONA</h1>
-        <Header iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}/>
+      {statusDoJogo==="home" && (
+        <div className="home-container">
+          <div className='titulo-botao'>
+          <h1>SALVE O JONA</h1>
+          <BotaoJogar iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}/>
+          </div>
+        </div>
+      )}
+
+      {statusDoJogo==="jogando" && (
+        <main className="jogando-container">
+
+        <h1 className='titulo-jogando'>SALVE O JONA</h1>
+        <div className='botao-jogando'>
+        <BotaoJogar iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}/>
+        </div>
+        
+        <div className='playground-jogando'>
         <Forca erros={letrasIncorretas.length} statusDoJogo={statusDoJogo}/>
         <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas}/>
         <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas} statusDoJogo={statusDoJogo}/>
+
+        </div>
         
         {/* Mensagens de vitória/derrota */}
       {statusDoJogo === 'venceu' && <h2>🎉 Parabéns, você venceu!</h2>}
       {statusDoJogo === 'perdeu' && <h2>❌ Você perdeu! A palavra era: {palavraSecreta}</h2>}
       </main>
+
+      )}
 
     </div>
   )

@@ -37,25 +37,27 @@ body {
 }
 
 /* 4. Camada 3: A Interface do Jogo (na frente de tudo) */
-.ui-container {
+.jogando-container {
   position: relative; /* Para que o z-index funcione */
   z-index: 3; /* Camada mais alta */
-  top: 40%;
-  
-  /* Usando Flexbox para organizar o conteúdo da UI verticalmente */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; /* Espaça os elementos (palavra, teclado, etc) */
-  align-items: center;
-  
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+
+  /* Make the div fill the entire viewport */
+  width: 100vw;       /* 100% of the viewport width */
+  height: 100vh;      /* 100% of the viewport height */
+
+  /* No background color, transparent by default, but explicitly: */
+  background-color: transparent;
+
+  /* Remove default margin/padding if any */
+  margin: 0;
+  padding: 0;
+
+  /* Box-sizing to avoid sizing issues */
+  box-sizing: border-box;
 }
 
 /* Pequenos ajustes para os componentes do jogo parecerem melhores em um fundo escuro */
-.ui-container h1, .ui-container h2 {
+.jogando-container h1, .jogando-container h2 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -63,4 +65,111 @@ body {
   margin-top: 1rem;
   font-size: 1.5rem;
   text-align: center;
+}
+
+/* src/App.css */
+
+/* ... todo o seu CSS anterior ... */
+
+/* Estilo para o contêiner da tela de Home */
+.home-container {
+  position: relative; /* Para que o z-index funcione */
+  z-index: 3; /* Camada mais alta */
+
+  /* Make the div fill the entire viewport */
+  width: 100vw;       /* 100% of the viewport width */
+  height: 100vh;      /* 100% of the viewport height */
+
+  /* No background color, transparent by default, but explicitly: */
+  background-color: transparent;
+
+  /* Use Flexbox to center children horizontally */
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+
+  /* Optional: If you want vertical centering, add align-items */
+  /* align-items: center; */ 
+
+  /* Remove default margin/padding if any */
+  margin: 0;
+  padding: 0;
+
+  /* Box-sizing to avoid sizing issues */
+  box-sizing: border-box;
+}
+
+.home-container h1, .home-container h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.titulo-jogando{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+}
+
+.botao-jogando {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.titulo-botao {
+  /* Position the div relative for vertical offset */
+    position: relative;
+
+    /* Shift down 40% from the top of viewport */
+    top: 55vh;
+
+    /* Flex container with vertical direction */
+    display: flex;
+    flex-direction: column;
+
+    /* Center children horizontally */
+    align-items: center;
+
+    /* Space between children vertically */
+    gap: 90px; /* Adjust vertical spacing here */
+
+    /* Container size just enough for children */
+    width: max-content;
+    height: max-content;
+
+    /* Optional: center container horizontally in parent */
+    margin: 0 auto;
+
+    /* Box sizing for reliable sizing */
+    box-sizing: border-box;
+}
+
+.playground-jogando {
+   /* Position the div relative to viewport */
+    position: relative;
+
+    /* Push the div down from the top by 40% of viewport height */
+    top: 55vh;
+
+    /* Use Flexbox for horizontal alignment */
+    display: flex;
+
+    /* Align children centered horizontally */
+    justify-content: center;
+
+    /* Add space (gap) between each child element */
+    gap: 20px; /* Adjust this value as needed for spacing */
+
+    /* Occupies only the necessary width based on children */
+    width: max-content;
+
+    /* Occupies only the necessary height based on children */
+    height: max-content;
+
+    /* Optional: remove default margin/padding */
+    margin: 0 auto; /* Horizontal auto margin to help center container itself if needed */
+    padding: 0;
+
+    /* Box-sizing to include padding/borders in size (good practice) */
+    box-sizing: border-box;
 }

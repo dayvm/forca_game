@@ -1,11 +1,11 @@
-export default function Header({ iniciarJogo, statusDoJogo }) {
+export default function BotaoJogar({ iniciarJogo, statusDoJogo }) {
     return (
-        <header>
+        <div>
             {statusDoJogo==="home" ? (
                 <button onClick={iniciarJogo}>Iniciar</button>
             ) : (
                 <button onClick={iniciarJogo}>Reiniciar</button>
             )}
-        </header>
+        </div>
     );
 }
