@@ -362,3 +362,48 @@ body {
 .vidas {
   height: 100px;
 }
+
+.botao-jogar {
+  /* Background and text */
+    background-color: #0172AD; /* Dark grey background */
+    color: #FFFFFF;            /* White text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+
+    /* Padding and size */
+    padding: 0.6em 1.5em;
+    border: 2px solid #003857; /* Medium grey border */
+    border-radius: 8px;
+
+    /* Shadow and depth */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+    /* Transition for smooth hover */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Cursor style */
+    cursor: pointer;
+
+    /* Prevent text selection on double-click */
+    user-select: none;
+
+    /* Inline-block to respect padding and allow layout */
+    display: inline-block;
+
+    /* Text alignment */
+    text-align: center;
+}
+
+/* Hover effect */
+.botao-jogar:hover {
+    background-color: rgb(0, 112, 172); /* Lighter dark grey */
+    border-color: #006297;     /* Lighter border */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.5);
+}
+
+/* Focus effect for accessibility */
+.botao-jogar:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #6a6a6a;
+}
