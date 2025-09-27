@@ -24,17 +24,21 @@ body {
   z-index: 1; /* Camada mais baixa */
 }
 
-/* 3. Camada 2: As Ondas (na frente do personagem) */
+
 .ondas-container {
-  position: fixed;
-  bottom: 0;
+  position: fixed; /* Usar absolute relativo ao .cena-container é melhor que fixed */
+  bottom: 0vh;
   left: 0;
   width: 100%;
-  height: 150px; /* A altura inicial da água */
+  height: 150px;
   background-repeat: repeat-x;
-  background-size: contain;
-  z-index: 2; /* Camada do meio */
+  background-size: contain; /* ou uma altura fixa ex: '150px' */
+  z-index: 2;
+  
+  /* ADICIONE ESTA LINHA PARA A ANIMAÇÃO SUAVE */
+  transition: bottom 0.5s ease-in-out; 
 }
+
 
 /* 4. Camada 3: A Interface do Jogo (na frente de tudo) */
 .jogando-container {

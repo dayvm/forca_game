@@ -64,6 +64,9 @@ function App() {
     }
   })
 
+  const alturaMaximaVh = 90;
+  const porcentagemErro = Math.min(letrasIncorretas.length/maxErrors,1);
+  const posicaoOnda = porcentagemErro*alturaMaximaVh;
   return (
     <div className="cena-container">
 
@@ -74,10 +77,13 @@ function App() {
       />
 
       <div 
-        className="ondas-container" 
-        style={{ backgroundImage: `url(${ondaGif})` }}
-      >
-      </div>
+  className="ondas-container" 
+  style={{ 
+    backgroundImage: `url(${ondaGif})`,
+    bottom: `${posicaoOnda}vh` // AQUI ESTÁ A MÁGICA!
+  }}
+>
+</div>
 
       {statusDoJogo==="home" && (
         <div className="home-container">
