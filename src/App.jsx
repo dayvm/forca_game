@@ -7,8 +7,8 @@ import { CorpoDeAgua } from './components/CorpoDeAgua'; // 1. IMPORTE O NOVO COM
 import { useState, useEffect } from 'react';
 import { palavras } from './data/palavras'
 import jonaPng from './assets/JONA.png';
-import ondaGif from './assets/onda gabriel renan.gif';
 import {GAME_CONFIG} from "./config.js"
+import { FimDeJogo } from "./telas/FimDeJogo.jsx"
 
 const maxErrors = GAME_CONFIG.maxErrors;
 function App() {
@@ -71,11 +71,13 @@ function App() {
   return (
     <div className="cena-container">
 
+      {(statusDoJogo!=="venceu" && statusDoJogo!=="perdeu") && (
       <img 
         src={jonaPng} 
         alt="Personagem Jona" 
         className="personagem" 
       />
+      )}
 
       <CorpoDeAgua erros={letrasIncorretas.length} maxErros={maxErrors} />
 
@@ -106,13 +108,11 @@ function App() {
 
         </div>
         
-        {/* Mensagens de vitória/derrota */}
-      {statusDoJogo === 'venceu' && <div className="venceu"><p>🎉 Parabéns, você venceu!</p></div>}
-      {statusDoJogo === 'perdeu' && <h2>❌ Você perdeu! A palavra era: {palavraSecreta}</h2>}
       </main>
 
-      )}
+)}
 
+{(statusDoJogo === "perdeu" || statusDoJogo=== "venceu") && (<FimDeJogo statusDoJogo={statusDoJogo} palavraSecreta={palavraSecreta}></FimDeJogo>)}
     </div>
   )
 }

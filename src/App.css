@@ -24,6 +24,8 @@ body {
   z-index: 1; /* Camada mais baixa */
 }
 
+
+
 @keyframes aguaMove {
   0% {
     transform: translateY(0);
@@ -491,4 +493,30 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.perdeu-venceu {
+    z-index: 3;
+   /* Position the div relative for vertical offset */
+    position: relative;
+
+    /* Flex container with vertical direction */
+    display: flex;
+    flex-direction: column;
+
+    /* Center children horizontally */
+    align-items: center;
+
+    /* Space between children vertically */
+    gap: 20px; /* Adjust vertical spacing here */
+
+    /* Container size just enough for children */
+    width: max-content;
+    height: max-content;
+
+    /* Optional: center container horizontally in parent */
+    margin: 0 auto;
+
+    /* Box sizing for reliable sizing */
+    box-sizing: border-box;
 }
