@@ -122,6 +122,49 @@ body {
   text-align: center;
 }
 
+.palavra {
+   /* Position the div relative to viewport */
+    position: relative;
+
+    /* Use Flexbox for horizontal alignment */
+    display: flex;
+
+    /* Align children centered horizontally */
+    justify-content: center;
+
+    /* Add space (gap) between each child element */
+    gap: 3px; /* Adjust this value as needed for spacing */
+
+    /* Occupies only the necessary width based on children */
+    width: max-content;
+
+    /* Occupies only the necessary height based on children */
+    height: 100%;
+
+    /* Optional: remove default margin/padding */
+    margin: 0 auto; /* Horizontal auto margin to help center container itself if needed */
+    padding: 0;
+
+    /* Box-sizing to include padding/borders in size (good practice) */
+    box-sizing: border-box;
+
+    
+}
+
+.palavra--final-um{
+  margin-top: 5vh;
+}
+.palavra--final-image{
+  margin-top: 5vh;
+  height: 30vh;
+}
+.palavra--final-dois{
+  margin-top: 12vh;
+}
+.palavra--final-tres{
+  
+}
+
 /* src/App.css */
 
 /* ... todo o seu CSS anterior ... */
@@ -385,34 +428,7 @@ body {
   text-align: center;
 }
 
-.palavra {
-   /* Position the div relative to viewport */
-    position: relative;
 
-    /* Use Flexbox for horizontal alignment */
-    display: flex;
-
-    /* Align children centered horizontally */
-    justify-content: center;
-
-    /* Add space (gap) between each child element */
-    gap: 3px; /* Adjust this value as needed for spacing */
-
-    /* Occupies only the necessary width based on children */
-    width: max-content;
-
-    /* Occupies only the necessary height based on children */
-    height: 100%;
-
-    /* Optional: remove default margin/padding */
-    margin: 0 auto; /* Horizontal auto margin to help center container itself if needed */
-    padding: 0;
-
-    /* Box-sizing to include padding/borders in size (good practice) */
-    box-sizing: border-box;
-
-    
-}
 
 .vidas {
   height: 100px;

@@ -4,7 +4,7 @@ import BotaoJogar from '../components/BotaoJogar';
 
 export function FimDeJogo({ statusDoJogo, palavraSecreta, iniciarJogo }) {
     const perdeu = {
-        texto1: "Ah, naaaãooooo!!! Você não conseguiu salvar o JONA!",
+        texto1: "Aahhh, naaaaaãoo!!! Você não conseguiu salvar o JONA!",
         texto2: "A palavra secreta era '" + palavraSecreta + "'.",
         texto3: "Mas não se preocupe! Você pode tentar novamente!"
     } 
@@ -19,13 +19,13 @@ export function FimDeJogo({ statusDoJogo, palavraSecreta, iniciarJogo }) {
 
     return (
         <div className='perdeu-venceu'>
-            <h1>{textos.texto1}</h1>
+            <h1 className='palavra palavra--final-um'>{textos.texto1}</h1>
             <img
             src={jona}
             alt="Jona"
-            className="jona-final"/>
-            <h1>{textos.texto2}</h1>
-            <h1>{textos.texto3}</h1>
+            className="palavra palavra--final-image"/>
+            <h1 className='palavra palavra--final-dois'>{textos.texto2}</h1>
+            <h1 className='palavra palavra--final-tres'>{textos.texto3}</h1>
             <BotaoJogar iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}></BotaoJogar>
         </div>
     );
