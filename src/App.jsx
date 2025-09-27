@@ -3,6 +3,7 @@ import BotaoJogar from './components/BotaoJogar'
 import Forca from './components/Forca'
 import Palavra from './components/Palavra'
 import Teclado from './components/Teclado'
+import { CorpoDeAgua } from './components/CorpoDeAgua'; // 1. IMPORTE O NOVO COMPONENTE
 import { useState, useEffect } from 'react';
 import { palavras } from './data/palavras'
 import jonaPng from './assets/JONA.png';
@@ -76,14 +77,8 @@ function App() {
         className="personagem" 
       />
 
-      <div 
-  className="ondas-container" 
-  style={{ 
-    backgroundImage: `url(${ondaGif})`,
-    bottom: `${posicaoOnda}vh` // AQUI ESTÁ A MÁGICA!
-  }}
->
-</div>
+      <CorpoDeAgua erros={letrasIncorretas.length} maxErros={maxErrors} />
+
 
       {statusDoJogo==="home" && (
         <div className="home-container">

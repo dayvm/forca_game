@@ -25,18 +25,45 @@ body {
 }
 
 
-.ondas-container {
-  position: fixed; /* Usar absolute relativo ao .cena-container é melhor que fixed */
-  bottom: 0vh;
+.corpo-de-agua-container {
+  position: fixed;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 150px;
-  background-repeat: repeat-x;
-  background-size: contain; /* ou uma altura fixa ex: '150px' */
-  z-index: 2;
+  z-index: 2; /* Continua na camada do meio */
+
+  /* Usando Flexbox para organizar as duas partes internas */
+  display: flex;
+  flex-direction: column; /* IMPORTANTE: Inverte a ordem para o topo ficar em cima */
+
+  /* A transição agora é na ALTURA */
+  transition: height 0.5s ease-in-out;
+}
+
+/* 2. A parte de cima, que contém o GIF */
+.topo-onda {
+  width: 100%;
+  height: 150px; /* Altura fixa para a onda */
   
-  /* ADICIONE ESTA LINHA PARA A ANIMAÇÃO SUAVE */
-  transition: bottom 0.5s ease-in-out; 
+  /* Propriedades do background que você já tinha */
+  background-repeat: repeat-x;
+  background-size: contain;
+
+  /* Garante que não encolha */
+  flex-shrink: 0; 
+}
+
+/* 3. A parte de baixo, com a cor sólida */
+.corpo-onda {
+  width: 100%;
+  
+  /* Cor de fundo que imita a água do seu GIF */
+  /* DICA: Use um "color picker" (seletor de cores) no seu navegador ou editor
+     para pegar um tom de azul/cinza escuro do seu GIF e colocar aqui. */
+  background-color: #005179; /* Coloque a cor correta aqui */
+
+  /* MÁGICA DO FLEXBOX: faz esta div crescer para preencher todo o espaço restante */
+  flex-grow: 1; 
 }
 
 
