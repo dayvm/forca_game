@@ -58,6 +58,7 @@ function App() {
   useEffect(() => {
     if (palavraSecreta) {
       console.log(palavraSecreta)
+      console.log(statusDoJogo)
     }
   })
 
@@ -103,7 +104,7 @@ function App() {
         </div>
         
         {/* Mensagens de vitória/derrota */}
-      {statusDoJogo === 'venceu' && <h2>🎉 Parabéns, você venceu!</h2>}
+      {statusDoJogo === 'venceu' && <div className="venceu"><p>🎉 Parabéns, você venceu!</p></div>}
       {statusDoJogo === 'perdeu' && <h2>❌ Você perdeu! A palavra era: {palavraSecreta}</h2>}
       </main>
 

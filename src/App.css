@@ -407,3 +407,35 @@ body {
     outline: none;
     box-shadow: 0 0 0 3px #6a6a6a;
 }
+
+.venceu {
+  /* Position the div relative to viewport */
+    position: relative;
+
+    /* Use Flexbox for horizontal alignment */
+    display: flex;
+
+    /* Align children centered horizontally */
+    justify-content: center;
+
+    /* Add space (gap) between each child element */
+    gap: 3px; /* Adjust this value as needed for spacing */
+
+    /* Occupies only the necessary width based on children */
+    width: max-content;
+
+    /* Occupies only the necessary height based on children */
+    height: 40%;
+
+    /* Optional: remove default margin/padding */
+    margin: 0 auto; /* Horizontal auto margin to help center container itself if needed */
+    padding: 0;
+
+    /* Box-sizing to include padding/borders in size (good practice) */
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
