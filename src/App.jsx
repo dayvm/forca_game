@@ -112,7 +112,7 @@ function App() {
 
 )}
 
-{(statusDoJogo === "perdeu" || statusDoJogo=== "venceu") && (<FimDeJogo statusDoJogo={statusDoJogo} palavraSecreta={palavraSecreta}></FimDeJogo>)}
+{(statusDoJogo === "perdeu" || statusDoJogo=== "venceu") && (<FimDeJogo statusDoJogo={statusDoJogo} palavraSecreta={palavraSecreta} iniciarJogo={iniciarJogo}></FimDeJogo>)}
     </div>
   )
 }
