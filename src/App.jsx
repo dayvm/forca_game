@@ -7,7 +7,9 @@ import { useState, useEffect } from 'react';
 import { palavras } from './data/palavras'
 import jonaPng from './assets/JONA.png';
 import ondaGif from './assets/onda gabriel renan.gif';
+import {GAME_CONFIG} from "./config.js"
 
+const maxErrors = GAME_CONFIG.maxErrors;
 function App() {
   const [palavraSecreta, setPalavraSecreta] = useState("");
   const [letrasCorretas, setLetrasCorretas] = useState([]);
@@ -45,7 +47,7 @@ function App() {
       return;
     }
 
-    if (letrasIncorretas.length>=7){
+    if (letrasIncorretas.length>=maxErrors){
       setStatusDoJogo("perdeu");
     }
   }, [letrasCorretas, letrasIncorretas, palavraSecreta]);
