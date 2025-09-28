@@ -1,4 +1,4 @@
-# Salve o Jona 🌊
+# <img src="https://github.com/dayvm/forca_game/blob/develop/src/assets/JONAlogo.png" alt="Logo do Jona" width="30" /> Salve o Jona
 
 > **Status:** Projeto Concluído ✅
 
@@ -81,7 +81,7 @@ Este projeto foi desenvolvido como parte de um exercício de aprendizado e não 
 
 ## 👨‍💻 Autor
 
-Feito com ❤️ por **[Dayvson]**
+Feito com ❤️ por **Dayvson**
 
 [](https://www.linkedin.com/in/dayvson-moura-set/)
 [](https://github.com/dayvm)
