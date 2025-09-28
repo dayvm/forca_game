@@ -12,7 +12,9 @@ import jonaLOGO from "./assets/JONAlogo.png";
 import jonaFUNDO from "./assets/JONAfundo.png";
 import jonaBONECO from "./assets/jonaPadraoNovo.png";
 import jonaMUSICA from "./audio/jona_musica_fundo.mp3";
-// import jonaMUSICA from "./audio/TESTE.mp3";
+import answer from "./audio/hover1.mp3";
+import win from "./audio/win1.mp3";
+import lose from "./audio/lost.mp3";
 
 const maxErrors = GAME_CONFIG.maxErrors;
 function App() {
@@ -23,6 +25,9 @@ function App() {
 
   const musicaFundoRef = useRef(new Audio(jonaMUSICA));
   const musicaIniciada = useRef(false);
+  const answerGame = new Audio(answer);
+  const volume = 0.5;
+  answerGame.volume = volume;
 
   const iniciarJogo = () => {
     const palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
@@ -98,8 +103,26 @@ function App() {
     // audio.pause(); // Pausa a música para não continuar tocando em outras páginas
     // audio.currentTime = 0; // Opcional: reseta a música para o início
 };
-
   }, [statusDoJogo]);
+
+  useEffect(()=>{
+    if ((letrasCorretas && letrasCorretas.length!=0) || (letrasIncorretas && letrasIncorretas.length!=0)){
+      answerGame.play();
+    }
+  },[letrasCorretas, letrasIncorretas]);
+
+  useEffect(()=>{
+    if (statusDoJogo==="venceu") {
+      const winGame = new Audio(win);
+      winGame.volume=volume;
+      winGame.play()
+    }
+    if (statusDoJogo==="perdeu") {
+      const loseGame = new Audio(lose);
+      loseGame.volume=volume;
+      loseGame.play()
+    }
+  }, [statusDoJogo])
 
   return (
     <div 
