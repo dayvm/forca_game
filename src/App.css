@@ -148,6 +148,7 @@ body {
     /* Box-sizing to include padding/borders in size (good practice) */
     box-sizing: border-box;
 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     
 }
 
