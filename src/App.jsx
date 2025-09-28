@@ -4,13 +4,15 @@ import Forca from './components/Forca'
 import Palavra from './components/Palavra'
 import Teclado from './components/Teclado'
 import { CorpoDeAgua } from './components/CorpoDeAgua'; // 1. IMPORTE O NOVO COMPONENTE
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { palavras } from './data/palavras'
 import {GAME_CONFIG} from "./config.js"
 import { FimDeJogo } from "./telas/FimDeJogo.jsx"
 import jonaLOGO from "./assets/JONAlogo.png";
 import jonaFUNDO from "./assets/JONAfundo.png";
 import jonaBONECO from "./assets/jonaPadraoNovo.png";
+import jonaMUSICA from "./audio/jona_musica_fundo.mp3";
+// import jonaMUSICA from "./audio/TESTE.mp3";
 
 const maxErrors = GAME_CONFIG.maxErrors;
 function App() {
@@ -18,6 +20,9 @@ function App() {
   const [letrasCorretas, setLetrasCorretas] = useState([]);
   const [letrasIncorretas, setLetrasIncorretas] = useState([]);
   const [statusDoJogo, setStatusDoJogo] = useState ('home');
+
+  const musicaFundoRef = useRef(new Audio(jonaMUSICA));
+  const musicaIniciada = useRef(false);
 
   const iniciarJogo = () => {
     const palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
@@ -67,6 +72,34 @@ function App() {
     }
   })
 
+ useEffect(() => {
+  const audio = musicaFundoRef.current;
+
+  if (statusDoJogo==="jogando" && musicaIniciada.current===false) {
+    musicaIniciada.current=true;
+
+    // Configura a música para tocar em loop
+    audio.loop = true;
+
+    // Tenta tocar a música.
+    // O .catch() é importante para lidar com as políticas de autoplay dos navegadores.
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // O autoplay foi bloqueado pelo navegador. Isso é normal.
+        // A música provavelmente começará quando o usuário interagir com a página.
+        console.log("Autoplay da música de fundo bloqueado:", error);
+      });
+    }    
+  }
+  return () => {
+    // A "função de limpeza": será executada quando o componente for desmontado
+    // audio.pause(); // Pausa a música para não continuar tocando em outras páginas
+    // audio.currentTime = 0; // Opcional: reseta a música para o início
+};
+
+  }, [statusDoJogo]);
 
   return (
     <div 
