@@ -16,6 +16,10 @@ export function FimDeJogo({ statusDoJogo, palavraSecreta, iniciarJogo }) {
     
     let textos = statusDoJogo==="venceu" ? ganhou : perdeu;
     let jona = statusDoJogo==="venceu" ? jonaHAPPY : jonaDEAD;
+    const jonaImgClass = ["palavra palavra--final-image"]
+    if (statusDoJogo==="venceu") {
+        jonaImgClass.push("destaque");
+    }
 
     return (
         <div className='perdeu-venceu'>
@@ -23,7 +27,7 @@ export function FimDeJogo({ statusDoJogo, palavraSecreta, iniciarJogo }) {
             <img
             src={jona}
             alt="Jona"
-            className="palavra palavra--final-image"/>
+            className={jonaImgClass.join(' ')}/>
             <h1 className='palavra palavra--final-dois'>{textos.texto2}</h1>
             
             <BotaoJogar iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}></BotaoJogar>

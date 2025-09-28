@@ -64,6 +64,9 @@ body {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+.corpo-de-agua-container-fim {
+  bottom: 20px;
+}
 
 /* 2. A parte de cima, que contém o GIF */
 .topo-onda {
@@ -91,6 +94,19 @@ body {
   flex-grow: 1; 
 }
 
+@keyframes fadeCorpoOnda {
+  0% {
+    background-color: #005179;
+  }
+  100%{
+    background-color: #00517900;
+  }
+}
+.corpo-onda-fim {
+  animation-name: fadeCorpoOnda;
+  animation-duration: 1s;
+  background-color: #00517900;
+}
 
 /* 4. Camada 3: A Interface do Jogo (na frente de tudo) */
 .jogando-container {
@@ -159,6 +175,10 @@ body {
 .palavra--final-image{
   margin-top: 5vh;
   height: 30vh;
+}
+.destaque {
+  margin-top: 0vh;
+  height: 40vh;
 }
 .palavra--final-dois{
   margin-top: 12vh;

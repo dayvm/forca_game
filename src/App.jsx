@@ -124,7 +124,7 @@ function App() {
       }
       
 
-      <CorpoDeAgua erros={letrasIncorretas.length} maxErros={maxErrors} />
+      <CorpoDeAgua erros={letrasIncorretas.length} maxErros={maxErrors} statusDoJogo={statusDoJogo}/>
 
 
       {statusDoJogo==="home" && (

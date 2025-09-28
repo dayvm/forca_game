@@ -3,7 +3,7 @@
 import ondaGif from '../assets/onda gabriel renan.gif';
 
 // O componente recebe os erros e o máximo de erros, como planejamos
-export function CorpoDeAgua({ erros, maxErros }) {
+export function CorpoDeAgua({ erros, maxErros, statusDoJogo}) {
   
   // A lógica de cálculo da altura agora vive aqui dentro.
   // Vamos calcular a altura que a água deve ter, em vez de sua posição 'bottom'.
@@ -11,12 +11,19 @@ export function CorpoDeAgua({ erros, maxErros }) {
 
   const alturaVariavelVh = porcentagemDeErro * 100;
 
+  const classAguaContainer = ["corpo-de-agua-container"];
+  const classOnda = ["corpo-onda"];
+  if (statusDoJogo==="perdeu") {
+    classAguaContainer.push("corpo-de-agua-container-fim")
+    classOnda.push("corpo-onda-fim")
+  } 
+
   return (
     // 1. O CONTÊINER PRINCIPAL: é ele quem vai crescer e ter a transição suave.
     // Usamos a função calc() do CSS para somar a altura fixa da onda (150px)
     // com a altura variável que calculamos (em vh).
     <div 
-      className="corpo-de-agua-container"
+      className={classAguaContainer.join(' ')}
       style={{
         height: `calc(150px + ${alturaVariavelVh}vh)`
       }}
@@ -30,8 +37,10 @@ export function CorpoDeAgua({ erros, maxErros }) {
       </div>
 
       {/* 3. O CORPO DA ONDA (a cor sólida que preenche o resto) */}
-      <div className="corpo-onda">
+
+      <div className={classOnda.join(' ')}>
       </div>
+      
 
     </div>
   );
