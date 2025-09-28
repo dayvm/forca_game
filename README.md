@@ -75,7 +75,7 @@ Para executar este projeto em sua máquina local, siga os passos abaixo.
 
 ## 📝 Agradecimentos
 
-Este projeto foi desenvolvido como parte de um exercício de aprendizado e não teria sido possível sem a ajuda e orientação de diversos contribuintes e da comunidade de desenvolvimento, incluindo a assistência de diversas IAs para depuração de lógica, estruturação de componentes, design visual, etc.
+Este projeto foi desenvolvido como parte de um exercício de aprendizado e não teria sido possível sem a ajuda de diversas ferramentas e softwares e da comunidade de desenvolvimento, incluindo a assistência de diversas IAs para depuração de lógica, estruturação de componentes, design visual, etc.
 
 -----
 
