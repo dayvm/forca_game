@@ -462,13 +462,13 @@ body {
 
   /* Background and text */
   background-color: #cbd4dd;
-  color: #2F2F2F;
+  color: #0793D9;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 3rem;
   letter-spacing: 0.05em;
 
   /* Border and radius */
-  border: 2px solid #555555;
+  border: 2px solid #005179;
   border-radius: 8px;
 
   /* Shadow and transitions */
