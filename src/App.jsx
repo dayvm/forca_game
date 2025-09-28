@@ -6,9 +6,11 @@ import Teclado from './components/Teclado'
 import { CorpoDeAgua } from './components/CorpoDeAgua'; // 1. IMPORTE O NOVO COMPONENTE
 import { useState, useEffect } from 'react';
 import { palavras } from './data/palavras'
-import jonaPng from './assets/JONA.png';
 import {GAME_CONFIG} from "./config.js"
 import { FimDeJogo } from "./telas/FimDeJogo.jsx"
+import jonaLOGO from "./assets/JONAlogo.png";
+import jonaFUNDO from "./assets/JONAfundo.png";
+import jonaBONECO from "./assets/jonaPadraoNovo.png";
 
 const maxErrors = GAME_CONFIG.maxErrors;
 function App() {
@@ -65,19 +67,26 @@ function App() {
     }
   })
 
-  const alturaMaximaVh = 90;
-  const porcentagemErro = Math.min(letrasIncorretas.length/maxErrors,1);
-  const posicaoOnda = porcentagemErro*alturaMaximaVh;
+
   return (
     <div className="cena-container">
 
-      {(statusDoJogo!=="venceu" && statusDoJogo!=="perdeu") && (
-      <img 
-        src={jonaPng} 
+      { statusDoJogo==="home" ? (
+         <img 
+        src={jonaLOGO} 
         alt="Personagem Jona" 
         className="personagem" 
       />
-      )}
+      ) : statusDoJogo==="jogando" ? (
+
+        <img 
+          src={jonaBONECO} 
+          alt="Personagem Jona" 
+          className="personagem" 
+        />
+      ) : (<div></div>)
+      }
+      
 
       <CorpoDeAgua erros={letrasIncorretas.length} maxErros={maxErrors} />
 
@@ -85,7 +94,6 @@ function App() {
       {statusDoJogo==="home" && (
         <div className="home-container">
           <div className='titulo-botao'>
-          <h1>SALVE O JONA</h1>
           <BotaoJogar iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}/>
           </div>
         </div>
@@ -94,7 +102,12 @@ function App() {
       {statusDoJogo==="jogando" && (
         <main className="jogando-container">
 
-        <h1 className='titulo-jogando'>SALVE O JONA</h1>
+        
+          <img 
+        src={jonaLOGO} 
+        alt="Personagem Jona" 
+        className="logo-pequena" 
+      />
         <div className='botao-jogando'>
         <BotaoJogar iniciarJogo={iniciarJogo} statusDoJogo={statusDoJogo}/>
         </div>

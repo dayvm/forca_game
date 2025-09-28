@@ -206,6 +206,11 @@ body {
   left: 0;
   margin: 20px;
 }
+.logo-pequena {
+  position: absolute;
+  margin: 20px;
+  width: 10%;
+}
 
 .botao-jogando {
   position: absolute;
@@ -318,7 +323,7 @@ body {
     position: relative;
 
     /* Shift down 40% from the top of viewport */
-    top: 55vh;
+    top: 65vh;
 
     /* Flex container with vertical direction */
     display: flex;
@@ -499,6 +504,7 @@ body {
     padding: 0.6em 1.5em;
     border: 2px solid #003857; /* Medium grey border */
     border-radius: 8px;
+    margin: 20px;
 
     /* Shadow and depth */
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);

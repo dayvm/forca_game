@@ -1,5 +1,5 @@
-import jonaHAPPY from '../assets/jonaHAPPY.png';
-import jonaDEAD from '../assets/jonaDEAD.png';
+import jonaHAPPY from '../assets/jonaHappyNovo.png';
+import jonaDEAD from '../assets/jonaDEADnovo.png';
 import BotaoJogar from '../components/BotaoJogar';
 
 export function FimDeJogo({ statusDoJogo, palavraSecreta, iniciarJogo }) {
