@@ -162,9 +162,6 @@ body {
 .palavra--final-dois{
   margin-top: 12vh;
 }
-.palavra--final-tres{
-  
-}
 
 /* src/App.css */
 
@@ -478,6 +475,10 @@ body {
 .botao-jogar:focus {
     outline: none;
     box-shadow: 0 0 0 3px #6a6a6a;
+}
+
+.botao-jogar--final {
+  margin-top: 3vh;
 }
 
 .venceu {

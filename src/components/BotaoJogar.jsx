@@ -6,7 +6,7 @@ export default function BotaoJogar({ iniciarJogo, statusDoJogo }) {
             ) : statusDoJogo==="jogando" ? (
                 <button className= "botao-jogar" onClick={iniciarJogo}>Reiniciar</button>
             ) : (
-                <button className= "botao-jogar" onClick={iniciarJogo}>Jogar novamente</button>
+                <button className= "botao-jogar botao-jogar--final" onClick={iniciarJogo}>Jogar novamente</button>
             )}
         </div>
     );
