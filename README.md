@@ -83,8 +83,8 @@ Este projeto foi desenvolvido como parte de um exercício de aprendizado e não 
 
 Feito com ❤️ por **Dayvson**
 
-[(https://www.linkedin.com/in/dayvson-moura-set/)]
-[(https://github.com/dayvm)]
+[](https://www.google.com/search?q=https://www.linkedin.com/in/dayvson-moura-set/)
+[](https://www.google.com/search?q=https://github.com/dayvm)
 
 -----
 
