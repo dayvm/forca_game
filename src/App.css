@@ -12,6 +12,7 @@ body {
   background-color: rgb(119, 153, 167);
   position: relative; 
   overflow: auto;
+  background-size: cover;
 }
 
 /* 2. Camada 1: O Personagem (no fundo) */

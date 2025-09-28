@@ -69,7 +69,10 @@ function App() {
 
 
   return (
-    <div className="cena-container">
+    <div 
+    className="cena-container"
+    style={{backgroundImage: `url(${jonaFUNDO})`}}
+    >
 
       { statusDoJogo==="home" ? (
          <img 
