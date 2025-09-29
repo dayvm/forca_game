@@ -2,7 +2,7 @@
 
 > **Status:** Projeto Concluído ✅
 
-Um jogo de adivinhação de palavras com uma reviravolta aquática\! Desenvolvido como um projeto prático, para a disciplina de Programação FRONT-END do curso de Sistemas para Internet da Universidade Católica de Pernambuco, para explorar conceitos modernos de desenvolvimento web com React.
+Um jogo de adivinhação de palavras com uma reviravolta aquática\! Desenvolvido como um projeto prático, para a disciplina de Programação FRONT-END do curso de Sistemas para Internet da Universidade Católica de Pernambuco, para explorar conceitos modernos de desenvolvimento web com React. Acesse agora em [Salve o Jona!](https://salveojona.vercel.app/)!
 
 -----
 
