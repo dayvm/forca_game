@@ -18,7 +18,9 @@ import lose from "./audio/lost.mp3";
 
 const maxErrors = GAME_CONFIG.maxErrors;
 function App() {
+  const [palavraConjunto, setPalavraConjunto] = useState([])
   const [palavraSecreta, setPalavraSecreta] = useState("");
+  const [dicaEscolhida, setDica] = useState("");
   const [letrasCorretas, setLetrasCorretas] = useState([]);
   const [letrasIncorretas, setLetrasIncorretas] = useState([]);
   const [statusDoJogo, setStatusDoJogo] = useState('home');
@@ -30,8 +32,12 @@ function App() {
   answerGame.volume = volume;
 
   const iniciarJogo = () => {
-    const palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
+    const palavraEscolhida = palavras[Math.floor(Math.random() * palavras.length)];
+    const palavraAleatoria = palavraEscolhida.palavra;
+    const dica = Math.random() < 0.5 ? palavraEscolhida.pergunta : palavraEscolhida.elaborada;
     setPalavraSecreta(palavraAleatoria);
+    setPalavraConjunto(palavraEscolhida);
+    setDica(dica);
     setLetrasCorretas([]);
     setLetrasIncorretas([]);
     setStatusDoJogo('jogando');
@@ -162,7 +168,20 @@ function App() {
 
           <div className='playground-jogando'>
             <div className='palavra-vidas'>
+              <h1>Tema: {palavraConjunto.tema.toUpperCase()}</h1>
               <Palavra palavraSecreta={palavraSecreta} letrasCorretas={letrasCorretas} />
+              {letrasIncorretas.length >= 2 && letrasIncorretas.length < 6 && (
+                <h3>
+                  {letrasIncorretas.length === 2 && "🌊 O JONA já está com água até os joelhos... cuidado!"}
+                  {letrasIncorretas.length === 4 && "😰 A água está chegando no peito do JONA... você precisa acertar logo!"}
+                  {letrasIncorretas.length === 5 && "⚠️ O JONA está quase se afogando! É sua última chance de salvá-lo!"}
+                </h3>
+              )}
+
+              {letrasIncorretas.length === 6 && (
+                <h3>💡 O JONA grita antes de afundar: DICA → {dicaEscolhida}</h3>
+              )}
+
               <Forca erros={letrasIncorretas.length} statusDoJogo={statusDoJogo} />
             </div>
             <Teclado handleTentativa={handleTentativa} letrasCorretas={letrasCorretas} letrasIncorretas={letrasIncorretas} statusDoJogo={statusDoJogo} />
