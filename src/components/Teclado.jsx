@@ -40,7 +40,7 @@ export default function Teclado({ handleTentativa, letrasCorretas, letrasIncorre
                                 // Desabilitamos o botão se a letra já foi tentada
                                 disabled={isCorreta || isErrada}
                             >
-                                {letra.toUpperCase()}
+                                <b>{letra.toUpperCase()}</b>
                             </button>
                         );
                     })}
