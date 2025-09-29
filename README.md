@@ -79,6 +79,20 @@ Este projeto foi desenvolvido como parte de um exercício de aprendizado e não 
 
 -----
 
+## 🎨 Créditos
+
+- **Música:**  
+  *[DDTANK - Mundo embaixo da Água](https://www.youtube.com/watch?v=TtGqJEr511w)*  
+
+- **Efeitos Sonoros:**  
+  *[Eleven Labs](https://elevenlabs.io/pt/sound-effects)*  
+
+- **Design Visual:**  
+  *[Gemini](https://gemini.google.com/)*  
+
+-----
+
+
 ## 👨‍💻 Autor
 
 Feito com ❤️ por **Dayvson**
