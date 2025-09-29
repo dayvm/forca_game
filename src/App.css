@@ -46,6 +46,7 @@ body {
 }
 
 .corpo-de-agua-container {
+  opacity: 85%;
   position: fixed;
   bottom: -20px;
   left: 0;
@@ -248,8 +249,8 @@ body {
   padding: 0;
 
   /* Background and text */
-  background-color: #2F2F2F;
-  color: #FFFFFF;
+  background-color: #89b6ca;
+  color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
