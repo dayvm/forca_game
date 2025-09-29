@@ -95,9 +95,9 @@ Este projeto foi desenvolvido como parte de um exercício de aprendizado e não 
 
 ## 👨‍💻 Autor
 
-Feito com ❤️ por **Dayvson**
+Feito com ❤️ por **dayvmpro**
 
-[Linkedin](https://www.linkedin.com/in/dayvson-moura-set/)
+[Linkedin](https://www.linkedin.com/in/dayvson-moura-pro/)
 [Github](https://github.com/dayvm)
 
 -----
