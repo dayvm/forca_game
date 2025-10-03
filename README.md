@@ -1,4 +1,7 @@
-# <img src="https://github.com/dayvm/forca_game/blob/develop/src/assets/JONAlogo.png" alt="Logo do Jona" width="150" /> 
+<p align="center">
+  <img src="https://github.com/dayvm/forca_game/blob/develop/src/assets/JONAlogo.png" alt="Logo do Jona" width="300" />
+</p>
+
 # Salve o Jona
 
 > **Status:** Projeto Concluído ✅
