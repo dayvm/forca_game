@@ -106,6 +106,17 @@ Feito com ❤️ por **dayvm**
 
 -----
 
+## 🚀 Futuros Passos / Melhorias
+
+- **Design**: Melhorar estrutura visual para melhor responsividade, utilizacao em outros tipos de tela, etc.
+- **Código**: Tornar, de fato secreta, a palavra, utilizando hash ou outra tecnologia.
+- **Botões**: Criar botão de desativar música.
+- Etc...
+
+Caso tenha sugestões ou queira contribuir com essas melhorias, fique à vontade para abrir uma issue ou um pull request!
+
+-----
+
 ## 📜 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
